@@ -61,7 +61,7 @@
       become: yes
 
     - name: Set rights to Docker
-      shell: usermod-a -G docker ec2-user
+      shell: usermod -a -G docker ec2-user
       become: yes
 
     - name: Checkout Git repo
