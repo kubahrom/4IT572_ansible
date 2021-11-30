@@ -22,3 +22,14 @@
 
 - Deploy EC2
   `ansible-playbook ec2_deploy.yml --ask-vault-pass`
+
+## Eshop
+
+- Install ansible
+  `pip3 install ansible==4`
+
+- Copy key
+  `scp -i "devops.pem" ./devops.pem ec2-user@ec2-100-24-21-171.compute-1.amazonaws.com:~/4IT572_ansible`
+
+- Deploy EC2 and Eshop
+  `ansible-playbook ec2_deploy.yml --user ec2-user --key-file ../devops.pem --ask-vault-pass`
